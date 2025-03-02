@@ -14,8 +14,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>The Wild Oasis</title>
-        <link rel="icon" href="logo.png" />
+        <title>InstanTask</title>
       </Head>
       <div
         className={`${josefin.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}

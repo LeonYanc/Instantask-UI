@@ -1,30 +1,46 @@
-import Link from "next/link";
-import Image from "next/image";
-import bg from "@/public/bg.png";
+// pages/index.js
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function LoginPage() {
+  const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    router.push('/board');
+  };
+
   return (
-    <main className="mt-24">
-      <Image
-        src={bg}
-        fill
-        placeholder="blur"
-        quality={80}
-        className="object-cover object-top"
-        alt="Mountains and forests with two cabins"
-      />
-
-      <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
-          Welcome to paradise.
-        </h1>
-        <Link
-          href="/cabins"
-          className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
-        >
-          Explore luxury cabins
-        </Link>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h1 className="text-2xl font-bold text-center mb-6">Login</h1>
+        <form onSubmit={handleLogin} className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
+          >
+            Login
+          </button>
+        </form>
       </div>
-    </main>
+    </div>
   );
 }
