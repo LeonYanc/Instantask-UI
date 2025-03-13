@@ -1,46 +1,57 @@
-// pages/index.js
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useState } from 'react'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 
-export default function LoginPage() {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    router.push('/board');
-  };
+export default function IndexPage() {
+  const router = useRouter()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  async function handleLogin(e) {
+    e.preventDefault()
+    try {
+      const res = await axios.post('http://localhost:8080/api/users/login', {
+        email,
+        password,
+      })
+
+      const userId = res.data.id
+
+      // to/board?userId=xxx
+      router.push(`/board?userId=${userId}`)
+    } catch (err) {
+      alert('Invalid email or password')
+      console.error(err)
+    }
+  }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold text-center mb-6">Login</h1>
-        <form onSubmit={handleLogin} className="space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
-          >
-            Login
-          </button>
-        </form>
+      <div className="login-wrapper">
+        <div className="login-card">
+          <h1 className="login-title">Login</h1>
+          <form onSubmit={handleLogin} className="login-form">
+            <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="login-input"
+                required
+            />
+            <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="login-input"
+                required
+            />
+            <button type="submit" className="login-button">
+              Login
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-  );
+  )
 }

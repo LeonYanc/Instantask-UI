@@ -1,0 +1,280 @@
+.desktop-1 {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.rectangle1 {
+    background-color: #f4f5f7;
+    width: 100%;
+    height: 60px;
+}
+
+
+.user2 {
+    color: #000;
+    font-size: 64px;
+    font-family: 'Irish Grover', cursive;
+    margin: 40px auto 0 auto;
+    text-align: center;
+}
+
+
+.manageproductaccessforalltheusersinyouorganization {
+    color: #000;
+    font-size: 24px;
+    font-family: Itim, sans-serif;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+
+.totalUserLabel {
+    color: #000;
+    font-size: 24px;
+    font-family: Itim, sans-serif;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+
+.administratorsLabel {
+    color: #000;
+    font-size: 24px;
+    font-family: Itim, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.search-invite-row {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.rectangle3 {
+    width: 600px;
+    height: 48px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.rectangle3 input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.component2 {
+    flex: 0 0 25%;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.rectangle2 {
+    background-color: #0052cc;
+    width: 153px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    position: relative;
+}
+
+
+.inviteusers {
+    position: absolute;
+    left: 22px;
+    top: 13px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+}
+
+
+
+.rectangle5 {
+    width: 1200px;
+    height: 60px;
+    background-color: #f4f5f7;
+    margin: 40px auto 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 18rem;
+    padding-left: 1rem;
+}
+
+
+.user5, .lastactive, .status, .actions {
+    color: #000;
+    font-size: 24px;
+    font-family: Itim, sans-serif;
+    margin: 0;
+}
+
+
+.user-list-container {
+    width: 1200px;
+    margin: 1rem auto 0 auto;
+}
+
+
+
+.frame1 {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+
+
+    gap: 0;
+}
+
+
+.userRowNameEmail {
+    width: 300px;
+    margin-right: 50px;
+
+
+    color: #333;
+    font-size: 20px;
+    font-family: Itim, sans-serif;
+}
+
+
+.userRowLastActive {
+    width: 400px;
+    white-space: nowrap;
+    margin-right: 0px;
+
+    color: #000;
+    font-size: 20px;
+    font-family: Itim, sans-serif;
+}
+
+
+.userRowStatus {
+    width: 100px;
+    margin-right: 260px;
+
+    color: #000;
+    font-size: 20px;
+    font-family: Itim, sans-serif;
+}
+
+
+.rowActions {
+    width: 75px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+
+
+    color: #000;
+    font-size: 20px;
+    font-family: Itim, sans-serif;
+}
+
+
+.userDetailCardInRow {
+    position: absolute;
+    top: 30px;
+    left: -100px;
+    width: 200px;
+    background-color: #f4f5f7;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+
+.avatarCircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4392ca;
+    margin: 0 auto 1rem auto;
+    position: relative;
+}
+.avatarText {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+
+.infoLine {
+    font-size: 14px;
+    font-family: 'Inknut Antiqua', serif;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+
+.changesButton {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d9d9d9;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Inknut Antiqua', serif;
+    cursor: pointer;
+}
+
+
+.rowActions {
+    position: relative;
+}
+
+
+.actionRect {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 75px;
+    height: 52px;
+    background: #fff;
+    border-radius: 8px;
+}
+.actionDots {
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    font-size: 40px;
+    transform: rotate(-1deg);
+    color: #000;
+}
+

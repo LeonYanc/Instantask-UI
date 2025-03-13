@@ -1,4 +1,8 @@
 import "@/styles/globals.css";
+import '@/styles/Login.css'
+import '@/styles/UserListPage.css'
+import '@/styles/ChangeUserModal.css';
+import '@/styles/InviteUserModal.css';
 import Navigation from "@/components/Navigation";
 import Header from "@/components/Header";
 
